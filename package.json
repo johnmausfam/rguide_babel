@@ -1,0 +1,27 @@
+{
+  "name": "rguide",
+  "version": "1.0.0",
+  "description": "example for react & redux guide",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node devserver",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmausfam/rguide.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "fam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmausfam/rguide/issues"
+  },
+  "homepage": "https://github.com/johnmausfam/rguide#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
+  }
+}
