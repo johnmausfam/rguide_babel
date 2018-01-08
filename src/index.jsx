@@ -26,8 +26,8 @@ if(module.hot) {
     render()
   })
 
-  /*module.hot.accept('./reducers', () => {
+  module.hot.accept('./reducers', () => {
     const nextRootReducer = require('./reducers');
     store.replaceReducer(nextRootReducer);
-  });*/
+  });
 }
