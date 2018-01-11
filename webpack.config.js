@@ -35,6 +35,16 @@ module.exports = {
           }
         }
       ]},
+      { test: /\.(sass|scss)$/, loader: [
+        "style-loader",
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true
+          }
+        },
+        "sass-loader"
+      ]},
       {
         test: /\.(png|jpg|gif)$/,
         use: [
