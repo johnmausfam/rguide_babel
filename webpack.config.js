@@ -17,11 +17,7 @@ module.exports = {
   plugins:[
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-  	new webpack.SourceMapDevToolPlugin(),
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: require('./vendor-manifest.json')
-    })
+  	new webpack.SourceMapDevToolPlugin()
   ],
   module: {
     rules: [

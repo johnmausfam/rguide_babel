@@ -38,6 +38,7 @@
     "webpack-dev-server": "^2.10.0"
   },
   "dependencies": {
+    "FuncButton": "^1.0.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
