@@ -1,17 +1,9 @@
 import React from 'react'
-import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
-
+import URLOpener from './URLOpener'
+import "../css/App.css"
 const App = () => (
   <div>
-  	<div>
-  		<h1>ABX</h1>
-  		<h2>A22SS2</h2>
-  	</div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
+    <URLOpener className="pageField highLine" label="輸入網址:" buttonText="開啟網址" />
   </div>
 )
 
