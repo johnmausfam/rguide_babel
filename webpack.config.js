@@ -8,6 +8,12 @@ module.exports = {
       'webpack-dev-server/client?http://localhost:3000/',
       'webpack/hot/dev-server',
       path.resolve(__dirname, 'src/index.jsx')
+    ],
+    book: [
+      'react-hot-loader/patch',
+      'webpack-dev-server/client?http://localhost:3000/',
+      'webpack/hot/dev-server',
+      path.resolve(__dirname, 'src/index2.jsx')
     ]
   },
   output: {
@@ -42,19 +48,15 @@ module.exports = {
         "sass-loader"
       ]},
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(svg|png|jpe?g|gif)$/,
         use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          }
+          "file-loader"
         ]
       }
     ]
   },
   resolve: {
-      extensions: [".js",".json",".jsx"]
+      extensions: [".js",".json",".jsx"],
+      alias:{ images: path.resolve(__dirname, 'src/images/') }
   }
 };

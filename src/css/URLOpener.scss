@@ -1,18 +1,43 @@
 .com_URLOpener{
-	line-height:1.5em;
-	font-size:1em;
+  line-height:1.5em;
+  font-size:1em;
 
-	label{
-		font-weight:bold;
-		display:inline-block;
-		margin-right:12px;
-	}
+  label{
+    font-weight:bold;
+    display:inline-block;
+    margin-right:12px;
+  }
 
-	input{
-		margin-right:12px;
-	}
+  input{
+    margin-right:12px;
+  }
 
-	input.err{
-		background:#ff9999;
-	}
+  input.err{
+    background:#ff9999;
+  }
+}
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
 }

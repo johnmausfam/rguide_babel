@@ -1,18 +1,10 @@
 import React from 'react'
-import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
-import "../css/App.css"
+import Book,{BOOK_DATA} from './Book'
+import "../css/App2.scss"
 const App2 = () => (
-  <div>
-  	<div>
-  		<h1>App2</h1>
-  		<h2>A22SS2</h2>
-  	</div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
+  <div className="c_app2">
+  	<Book data={BOOK_DATA.React} />
   </div>
 )
 
-export default App
+export default App2
