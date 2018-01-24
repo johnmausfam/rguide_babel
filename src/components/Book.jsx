@@ -127,8 +127,16 @@ class Book extends React.Component {
           )
         })}
         <div className="c_bk_nav">
-          <button onClick={()=>this.movePage(-1)}>Prev</button>
-          <button onClick={()=>this.movePage(1)}>Next</button>
+          <button onClick={()=>this.movePage(-1)} disabled={this.state.currentPage == 0 ? "disabled" : ""}>Prev</button>
+          <button onClick={()=>this.movePage(1)} disabled={this.state.currentPage == this.props.data.pages.length-1 ? "disabled" : ""}>Next</button>
+          {(()=>{
+            if(this.state.currentPage == 0)
+              return <span>First page</span>
+            else if(this.state.currentPage == this.props.data.pages.length-1)
+              return <span>Last page</span>
+            else
+              return <span>{(this.state.currentPage+1)}/{this.props.data.pages.length}</span>
+          })()}
         </div>
       </div>
     );

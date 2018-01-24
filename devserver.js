@@ -9,6 +9,26 @@ var server = new WebpackDevServer(compiler, {
     inline :true,
     lazy: false,
     publicPath: config.output.publicPath, /* entry dir */
-    stats: { colors: true }
+    stats: { colors: true },
+    proxy:[
+      {
+        context:['/api/**','/data/**'],
+        target:"http://localhost:3001",
+        changeOrigin: true, //修改Header中的Origin
+        ws: true, //轉送Websocket,
+        pathRewrite: function(url, req, options) {
+          console.log(url);
+          console.log(req.url);
+          console.log(options);
+
+          var path = req.url.match(/^\/api\/v(1|2)\/(.*)/)[2];
+          if(req.url.match(/^\/(api|data)\/v2/)){
+            req.url = '/apiv2/' + path;
+          }else{
+            req.url = '/apiv1?path='+path;
+          }
+        }
+      }
+    ]
 });
 server.listen(3000);

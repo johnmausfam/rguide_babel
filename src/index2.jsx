@@ -31,3 +31,27 @@ if(module.hot) {
     store.replaceReducer(nextRootReducer);
   });
 }
+/*
+var count = 0
+class Child extends React.Component {
+  render() {
+    count++;
+    return <div>{count}</div>
+  }
+}
+
+const staticContext = {};
+class CProvider extends React.Component {
+  static childContextTypes = {}
+  getChildContext() {
+    return staticContext;
+  }
+  render() {
+    return this.props.children
+  }
+}
+
+const providerEntity = ReactDOM.render(
+  <CProvider><Child /></CProvider>, document.getElementById('root')
+)
+providerEntity.setState({});*/
