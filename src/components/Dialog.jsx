@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Classnames from 'classnames'
+import "../css/Dialog.scss"
 
 class Dialog extends React.Component {
   render() {

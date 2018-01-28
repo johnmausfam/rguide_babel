@@ -7,6 +7,7 @@ import ConfirmDialog from './ConfirmDialog'
 import SelectDialog from './SelectDialog'
 import * as BadContext from './BadContextUsage'
 import * as BetterContext from './BetterContextUsage'
+import * as ContextDialog from './ContextDialog'
 import * as HOC from './HOC'
 import "../css/App2.scss"
 /*const App2 = () => (
@@ -70,7 +71,7 @@ const App2 = () => (
     </BadContext.FreeTabContainer>
   </div>
 )*/
-
+/*
 const App2 = () => (
   <div className="c_app2">
     <BetterContext.FreeTabContextProvider>
@@ -91,6 +92,22 @@ const App2 = () => (
           <BetterContext.FreeTabNav />
         </div>
     </BetterContext.FreeTabContextProvider>
+  </div>
+)*/
+
+let testAlertCount = 0;
+const testAlert = ()=>{
+  alert("testAlertCount:" + (++testAlertCount));
+};
+
+const App2 = () => (
+  <div className="c_app2">
+    <ContextDialog.DialogConextProvider>
+      <h1>text dialog</h1>
+      <hr />
+      <button onClick={testAlert}>Test Alert!</button>
+      <ContextDialog.DialogManager />
+    </ContextDialog.DialogConextProvider>
   </div>
 )
 export default App2
